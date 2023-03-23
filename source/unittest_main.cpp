@@ -50,7 +50,7 @@ TEST(ModuleFunctionsTest, vecmulNonZeroVector) {
 
     for(size_t i=0; i<testvec.size(); ++i)
     {
-        EXPECT_EQ(testvec[i], testvec_val[i]);
+        EXPECT_DOUBLE_EQ(testvec[i], testvec_val[i]);
     }
 }
 
