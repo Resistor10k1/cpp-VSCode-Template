@@ -75,16 +75,6 @@ TEST(ModuleFunctionsTest, vecmulZeroVector) {
 
 // Start unit-tests for Module::classes ===============================================================
 
-class MyClassTest : public ::testing::Test {
- protected:
-  //void SetUp() override {}
-
-  // void TearDown() override {}
-
-  classes::MyClass m_();
-};
-
-
 /**
  * @brief Tests if the name is set correctly.
 */
@@ -108,6 +98,13 @@ TEST(ModuleClassesTest, outputCorrect) {
 
     EXPECT_EQ(c, 'c');
 
+}
+
+TEST(ModuleClassesTest, idCorrect) {
+    classes::MyClass m("MyClass");
+    int id_val = 111;
+
+    EXPECT_EQ(m.doSomething(), id_val);
 }
 
 
