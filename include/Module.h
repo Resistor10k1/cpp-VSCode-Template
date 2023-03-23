@@ -9,6 +9,7 @@
 
 #include <string>
 #include <vector>
+#include "Interface.h"
 
 
 // Function headers ==================================================
@@ -46,7 +47,7 @@ namespace classes
 /**
  * @brief Example class
 */
-class MyClass
+class MyClass : public Interface
 {
     public:
         /**
@@ -59,6 +60,12 @@ class MyClass
          * @brief Prints the name to the console.
         */
         void print(void);
+
+        /**
+         * @brief Implementation pure virtual function
+         * @return Returns 0 if successful.
+        */
+        int doSomething(void) override;
 
         /**
          * @brief Get the name of the instance

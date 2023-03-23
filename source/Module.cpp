@@ -36,6 +36,11 @@ void MyClass::print(void)
     std::cout << "This is class " << name << std::endl;
 }
 
+int MyClass::doSomething(void)
+{
+    return id;
+}
+
 std::string& MyClass::getName(void)
 {
     return name;
