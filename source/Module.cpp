@@ -36,5 +36,10 @@ void MyClass::print(void)
     std::cout << "This is class " << name << std::endl;
 }
 
+std::string& MyClass::getName(void)
+{
+    return name;
+}
+
 } // namespace classes
 

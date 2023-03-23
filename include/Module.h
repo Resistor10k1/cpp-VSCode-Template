@@ -60,6 +60,12 @@ class MyClass
         */
         void print(void);
 
+        /**
+         * @brief Get the name of the instance
+         * @return Returns the name
+        */
+        std::string& getName(void);
+
     private:
 
         std::string name = ""; /**< Private member*/
