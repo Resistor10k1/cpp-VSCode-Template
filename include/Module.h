@@ -63,7 +63,7 @@ class MyClass : public Interface
 
         /**
          * @brief Implementation pure virtual function
-         * @return Returns 0 if successful.
+         * @return Returns the id.
         */
         int doSomething(void) override;
 
@@ -74,7 +74,6 @@ class MyClass : public Interface
         std::string& getName(void);
 
     private:
-
         std::string name = ""; /**< Private member*/
 
 };

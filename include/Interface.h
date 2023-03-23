@@ -29,7 +29,7 @@ class Interface
 
         /**
          * @brief Pure virtual function
-         * @return Returns 0 if successful.
+         * @return Returns something.
         */
         virtual int doSomething(void) = 0;
 
