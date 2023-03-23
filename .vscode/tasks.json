@@ -15,7 +15,7 @@
 //        },
 
 // Launch configuration for the unit-tests ===============================================
-        {
+        /*{
             "type": "cmake",
             "label": "cmakeConfigureTest",
             "command": "configure",
@@ -24,7 +24,7 @@
             ],
             "problemMatcher": [],
             "detail": "CMake configure unit-tests"
-        },
+        },*/
         {
             "type": "cmake",
             "label": "cmakeBuildTest",
@@ -36,14 +36,14 @@
             "problemMatcher": [],
             "detail": "CMake build unit-tests"
         }, 
-        {
+        /*{
             "label": "configureTests",
             "dependsOrder": "sequence",
             "dependsOn": [
                 "cmakeConfigureTest",
                 "cmakeBuildTest"
             ]
-        },
+        },*/
         {
             "label": "launchTests",
             "dependsOrder": "sequence",
@@ -54,7 +54,7 @@
         },
 
 // Launch configuration for the application ===============================================
-        {
+        /*{
             "type": "cmake",
             "label": "cmakeConfigure",
             "command": "configure",
@@ -63,7 +63,7 @@
             ],
             "problemMatcher": [],
             "detail": "CMake configure application"
-        },
+        },*/
         {
             "type": "cmake",
             "label": "cmakeBuild",
@@ -75,14 +75,14 @@
             "problemMatcher": [],
             "detail": "CMake build application"
         },
-        {
+        /*{
             "label": "configureApp",
             "dependsOrder": "sequence",
             "dependsOn": [
                 "cmakeConfigure",
                 "cmakeBuild"
             ]
-        },
+        },*/
         {
             "label": "launchApp",
             "dependsOrder": "sequence",
