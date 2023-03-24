@@ -3,28 +3,7 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-//        {
-//            "label": "build",
-//            "type": "shell",
-//            "command": "make",
-//            "group": {
-//                "kind": "build",
-//                "isDefault": true
-//            },
-//			"problemMatcher": "$gcc"
-//        },
-
 // Launch configuration for the unit-tests ===============================================
-        /*{
-            "type": "cmake",
-            "label": "cmakeConfigureTest",
-            "command": "configure",
-            "targets": [
-                "testcppTemplate"
-            ],
-            "problemMatcher": [],
-            "detail": "CMake configure unit-tests"
-        },*/
         {
             "type": "cmake",
             "label": "cmakeBuildTest",
@@ -35,35 +14,16 @@
             "group": "build",
             "problemMatcher": [],
             "detail": "CMake build unit-tests"
-        }, 
-        /*{
-            "label": "configureTests",
-            "dependsOrder": "sequence",
-            "dependsOn": [
-                "cmakeConfigureTest",
-                "cmakeBuildTest"
-            ]
-        },*/
+        },
         {
             "label": "launchTests",
             "dependsOrder": "sequence",
             "dependsOn": [
-                //"cmakeConfigureTest",
                 "cmakeBuildTest"
             ]
         },
 
 // Launch configuration for the application ===============================================
-        /*{
-            "type": "cmake",
-            "label": "cmakeConfigure",
-            "command": "configure",
-            "targets": [
-                "cppTemplate"
-            ],
-            "problemMatcher": [],
-            "detail": "CMake configure application"
-        },*/
         {
             "type": "cmake",
             "label": "cmakeBuild",
@@ -75,19 +35,10 @@
             "problemMatcher": [],
             "detail": "CMake build application"
         },
-        /*{
-            "label": "configureApp",
-            "dependsOrder": "sequence",
-            "dependsOn": [
-                "cmakeConfigure",
-                "cmakeBuild"
-            ]
-        },*/
         {
             "label": "launchApp",
             "dependsOrder": "sequence",
             "dependsOn": [
-                //"cmakeConfigure",
                 "cmakeBuild"
             ]
         }
