@@ -3,11 +3,16 @@
 #
 cmake_minimum_required (VERSION 3.14)
 
+set(COMMON_SOURCES "Module.cpp")
+set(TEST_SOURCES "unittest_main.cpp")
+set(APP_SOURCES "main.cpp")
+
+
 # Building instructions for the unit-tests.
 set(TARGET_NAME testcppTemplate)
 
 # Add source to this project's executable.
-add_executable(${TARGET_NAME} "unittest_main.cpp" "Module.cpp")
+add_executable(${TARGET_NAME} ${TEST_SOURCES} ${COMMON_SOURCES})
 
 target_include_directories(${TARGET_NAME} PRIVATE "${PROJECT_SOURCE_DIR}/include")
 
@@ -28,11 +33,11 @@ target_link_libraries(${TARGET_NAME} gtest_main)
 add_test(NAME cppTemplate_test COMMAND cppTemplate)
 
 
-# Building instructions for the application
+# Building instructions for the application ===========================================================
 set(TARGET_NAME cppTemplate)
 
 # Add source to this project's executable.
-add_executable(${TARGET_NAME} "main.cpp" "Module.cpp")
+add_executable(${TARGET_NAME} ${APP_SOURCES} ${COMMON_SOURCES})
 
 target_include_directories(${TARGET_NAME} PRIVATE "${PROJECT_SOURCE_DIR}/include")
 
