@@ -7,6 +7,7 @@
 
 
 #include <iostream>
+#include "templateLib.h"
 
 using namespace std;
 
@@ -15,5 +16,6 @@ int main(void)
 {
     cout << "This is the application main" << endl;
     cout << "Additional output ..." << endl;
+    cout << "Greeting: " << generateHelloStr("User") << endl;
     return 0;
 }
