@@ -11,10 +11,11 @@ In the VS-Code launch configurations only the application and building target ne
 ### Source files and include files
 Of course the class names, functions and files need to be named suitable for your project. New source files have to be added to the compilation list in the CMakeLists.txt in the source directory.
 
+### Unit-tests
+If new unit-tests are added, the list of sources and unit-tests in unittests/CMakeLists.txt has to be updated.
+
 ### Files for documentation
-For documenting the code, html files are generated with doxygen. That the config-file for doxygen is working properly, some paths need to be modified. Following modification need to be made in the doc/doygen/doxygenConfig file:
-- Configure the correct output path for the documentation files: Change line 71
-- Configure the correct input path for the documentation to be generated of: Change line 920
-- If images are used in the documentation: Change line 1075
+For documenting the code, html files are generated with doxygen. Only a few changes on the config-file are necessary. Following modification need to be made in the doc/doygen/doxygenConfig file:
+- Set correct project name: line 45
 
 This modifications can also be made with the Doxywizard.
