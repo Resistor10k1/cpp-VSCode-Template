@@ -11,5 +11,5 @@
 
 const std::string generateHelloStr(const std::string& personName)
 {
-    return "Hello " + personName;
+    return "Hello " + personName + " pipapo ";
 }
