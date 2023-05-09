@@ -20,7 +20,7 @@
             "name": "Launch Tests (Windows)",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceRoot}\\build\\source\\Debug\\testcppTemplate.exe",
+            "program": "${workspaceRoot}\\build\\unittests\\Debug\\testcppTemplate.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceRoot}",
