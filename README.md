@@ -1,5 +1,7 @@
 # cpp-VSCode-Template
 
+This repository serves as a starting point to a C++ project. If some parts are not used, e.g. the library in folder **lib**, this parts can simply be deleted. The **CMakeLists.txt** in the project directory has to be modified accordingly.
+
 ## What to change to use the template
 
 ### CMakeLists
