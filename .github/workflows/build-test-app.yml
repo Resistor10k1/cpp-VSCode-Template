@@ -1,0 +1,46 @@
+name: Build and test the application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  BUILD_TYPE_TEST: RelWithDebInfo
+
+jobs:
+  build-tests:
+    runs-on: ubuntu-22.04
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Configure CMake
+      run: cmake --preset test
+
+    - name: Build
+      # Build your program with the given configuration
+      run: cmake --build --preset test
+
+    - name: Test
+      working-directory: ${{github.workspace}}/build/test
+      run: ctest -C ${{env.BUILD_TYPE_TEST}}
+
+  run-tests:
+    runs-on: ubuntu-22.04
+    needs: build-tests
+    steps:
+    - name: Run tests
+      working-directory: ${{github.workspace}}/build/test
+      run: ctest -C ${{env.BUILD_TYPE_TEST}}
+
+  build-app:
+    runs-on: ubuntu-22.04
+    needs: run-tests
+    steps:
+    - name: Configure CMake
+      run: cmake --preset release
+
+    - name: Build
+      run: cmake --build --preset release
+
