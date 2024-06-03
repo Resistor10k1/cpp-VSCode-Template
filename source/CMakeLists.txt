@@ -1,7 +1,7 @@
 # CMakeList.txt : CMake project for cppTemplate, include source and define
 # project specific logic here.
 #
-cmake_minimum_required (VERSION 3.14)
+cmake_minimum_required (VERSION 3.27)
 
 set(COMMON_SOURCES "Module.cpp")
 set(APP_SOURCES "main.cpp")
@@ -11,7 +11,10 @@ set(LIB templateLib)
 set(TARGET_NAME cppTemplate)
 
 # Add source to this project's executable.
-add_executable(${TARGET_NAME} ${APP_SOURCES} ${COMMON_SOURCES})
+add_executable(${TARGET_NAME}
+    ${APP_SOURCES}
+    ${COMMON_SOURCES}
+)
 
 target_include_directories(${TARGET_NAME} PRIVATE "${PROJECT_SOURCE_DIR}/include")
 
