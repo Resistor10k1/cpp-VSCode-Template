@@ -5,11 +5,9 @@
  * @author  Andri Trottmann
  */
 
-
 #include "templateLib.h"
 
-
-const std::string generateHelloStr(const std::string& personName)
+const std::string generateHelloStr(const std::string &personName)
 {
-    return "Hello " + personName + " pipapo ";
+    return "Hello " + personName + ", how are you?";
 }
